@@ -13,3 +13,18 @@ C:\Users\adminhammer\Desktop\TrackLapper\TrackLapper\TrackLapper\bld\Debug\quali
 C:\Users\adminhammer\Desktop\TrackLapper\TrackLapper\TrackLapper\bld\Debug\qualifiers.txt.intermediate
 C:\Users\adminhammer\Desktop\TrackLapper\TrackLapper\TrackLapper\bld\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\adminhammer\Desktop\TrackLapper\TrackLapper\TrackLapper\bld\Debug\ProjectArchitectures.txt
+C:\Users\adminhammer\Desktop\Git Repo\TrackLapper\TrackLapper\TrackLapper\bin\Debug\ReverseMap\resources.pri
+C:\Users\adminhammer\Desktop\Git Repo\TrackLapper\TrackLapper\TrackLapper\bin\Debug\AppxManifest.xml
+C:\Users\adminhammer\Desktop\Git Repo\TrackLapper\TrackLapper\TrackLapper\bin\Debug\TrackLapper.build.appxrecipe
+C:\Users\adminhammer\Desktop\Git Repo\TrackLapper\TrackLapper\TrackLapper\bld\Debug\priconfig.xml
+C:\Users\adminhammer\Desktop\Git Repo\TrackLapper\TrackLapper\TrackLapper\bld\Debug\priconfig.xml.intermediate
+C:\Users\adminhammer\Desktop\Git Repo\TrackLapper\TrackLapper\TrackLapper\bld\Debug\layout.resfiles
+C:\Users\adminhammer\Desktop\Git Repo\TrackLapper\TrackLapper\TrackLapper\bld\Debug\layout.resfiles.intermediate
+C:\Users\adminhammer\Desktop\Git Repo\TrackLapper\TrackLapper\TrackLapper\bld\Debug\resources.resfiles
+C:\Users\adminhammer\Desktop\Git Repo\TrackLapper\TrackLapper\TrackLapper\bld\Debug\resources.resfiles.intermediate
+C:\Users\adminhammer\Desktop\Git Repo\TrackLapper\TrackLapper\TrackLapper\bld\Debug\pri.resfiles
+C:\Users\adminhammer\Desktop\Git Repo\TrackLapper\TrackLapper\TrackLapper\bld\Debug\pri.resfiles.intermediate
+C:\Users\adminhammer\Desktop\Git Repo\TrackLapper\TrackLapper\TrackLapper\bld\Debug\qualifiers.txt
+C:\Users\adminhammer\Desktop\Git Repo\TrackLapper\TrackLapper\TrackLapper\bld\Debug\qualifiers.txt.intermediate
+C:\Users\adminhammer\Desktop\Git Repo\TrackLapper\TrackLapper\TrackLapper\bld\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\adminhammer\Desktop\Git Repo\TrackLapper\TrackLapper\TrackLapper\bld\Debug\ProjectArchitectures.txt

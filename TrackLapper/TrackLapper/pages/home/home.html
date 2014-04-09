@@ -23,7 +23,19 @@
             </h1>
         </header>
         <section aria-label="Main content" role="main">
-            <p>Content goes here.</p>
+            <style>
+                #output {
+                    width:120px;
+                    height:25px;
+                    background-color: #CCC;
+                    border:1px solid #808080;
+                }
+            </style>
+            <p id="output"></p>
+            <div id="controls">
+                <button id="startPause" onclick="WinJS.Utilities.markSupportedForProcessing(startPause)">Start</button>
+                <button onclick="WinJS.Utilities.markSupportedForProcessing(reset)">Reset</button>
+            </div>
         </section>
     </div>
 </body>

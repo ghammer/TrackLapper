@@ -14,64 +14,64 @@
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\adminhammer\Desktop\TrackLapper\TrackLapper\TrackLapper\bin\Debug\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\adminhammer\Desktop\Git Repo\TrackLapper\TrackLapper\TrackLapper\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-03-28T18:08:05.947</Modified>
+      <Modified>2014-04-09T17:38:14.930</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\adminhammer\Desktop\TrackLapper\TrackLapper\TrackLapper\css\default.css">
+    <AppxPackagedFile Include="C:\Users\adminhammer\Desktop\Git Repo\TrackLapper\TrackLapper\TrackLapper\css\default.css">
       <PackagePath>css\default.css</PackagePath>
       <Modified>2014-03-28T18:07:12.213</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\adminhammer\Desktop\TrackLapper\TrackLapper\TrackLapper\pages\home\home.css">
+    <AppxPackagedFile Include="C:\Users\adminhammer\Desktop\Git Repo\TrackLapper\TrackLapper\TrackLapper\pages\home\home.css">
       <PackagePath>pages\home\home.css</PackagePath>
-      <Modified>2014-03-28T18:07:12.213</Modified>
+      <Modified>2014-04-09T17:42:35.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\adminhammer\Desktop\TrackLapper\TrackLapper\TrackLapper\images\logo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\adminhammer\Desktop\Git Repo\TrackLapper\TrackLapper\TrackLapper\images\logo.scale-100.png">
       <PackagePath>images\logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2013-07-21T21:19:32.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\adminhammer\Desktop\TrackLapper\TrackLapper\TrackLapper\images\smalllogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\adminhammer\Desktop\Git Repo\TrackLapper\TrackLapper\TrackLapper\images\smalllogo.scale-100.png">
       <PackagePath>images\smalllogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2013-07-21T21:19:32.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\adminhammer\Desktop\TrackLapper\TrackLapper\TrackLapper\images\splashscreen.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\adminhammer\Desktop\Git Repo\TrackLapper\TrackLapper\TrackLapper\images\splashscreen.scale-100.png">
       <PackagePath>images\splashscreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2013-07-21T21:19:32.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\adminhammer\Desktop\TrackLapper\TrackLapper\TrackLapper\images\storelogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\adminhammer\Desktop\Git Repo\TrackLapper\TrackLapper\TrackLapper\images\storelogo.scale-100.png">
       <PackagePath>images\storelogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2013-07-21T21:19:32.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\adminhammer\Desktop\TrackLapper\TrackLapper\TrackLapper\js\default.js">
+    <AppxPackagedFile Include="C:\Users\adminhammer\Desktop\Git Repo\TrackLapper\TrackLapper\TrackLapper\js\default.js">
       <PackagePath>js\default.js</PackagePath>
       <Modified>2014-03-28T18:07:12.197</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\adminhammer\Desktop\TrackLapper\TrackLapper\TrackLapper\js\navigator.js">
+    <AppxPackagedFile Include="C:\Users\adminhammer\Desktop\Git Repo\TrackLapper\TrackLapper\TrackLapper\js\navigator.js">
       <PackagePath>js\navigator.js</PackagePath>
       <Modified>2014-03-28T18:07:12.447</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\adminhammer\Desktop\TrackLapper\TrackLapper\TrackLapper\pages\home\home.js">
+    <AppxPackagedFile Include="C:\Users\adminhammer\Desktop\Git Repo\TrackLapper\TrackLapper\TrackLapper\pages\home\home.js">
       <PackagePath>pages\home\home.js</PackagePath>
-      <Modified>2014-03-28T18:07:12.620</Modified>
+      <Modified>2014-04-09T18:41:14.488</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\adminhammer\Desktop\TrackLapper\TrackLapper\TrackLapper\pages\home\home.html">
+    <AppxPackagedFile Include="C:\Users\adminhammer\Desktop\Git Repo\TrackLapper\TrackLapper\TrackLapper\pages\home\home.html">
       <PackagePath>pages\home\home.html</PackagePath>
-      <Modified>2014-03-28T18:07:12.213</Modified>
+      <Modified>2014-04-09T18:30:20.828</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\adminhammer\Desktop\TrackLapper\TrackLapper\TrackLapper\default.html">
+    <AppxPackagedFile Include="C:\Users\adminhammer\Desktop\Git Repo\TrackLapper\TrackLapper\TrackLapper\default.html">
       <PackagePath>default.html</PackagePath>
       <Modified>2014-03-28T18:07:12.213</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\adminhammer\Desktop\TrackLapper\TrackLapper\TrackLapper\bin\Debug\ReverseMap\resources.pri">
+    <AppxPackagedFile Include="C:\Users\adminhammer\Desktop\Git Repo\TrackLapper\TrackLapper\TrackLapper\bin\Debug\ReverseMap\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2014-03-28T18:08:05.040</Modified>
+      <Modified>2014-04-09T17:38:13.524</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
