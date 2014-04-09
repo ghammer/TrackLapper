@@ -9,7 +9,7 @@
             var time = 0;
             var running = 0;
             
-            function startPause() {
+            startPause.onclick = function startPause() {
                 if (running == 0) {
                     running = 1;
                     increment();
@@ -17,11 +17,11 @@
                 }
                 else {
                     running = 0;
-                    document.getElementById("startPuase").innerHTML = "Resume";
+                    document.getElementById("startPause").innerHTML = "Resume";
                 }
             }
 
-            function reset() {
+            reset.onclick = function reset() {
                 running = 0;
                 time = 0
                 document.getElementById("startPause").innerHTML = "Start";
@@ -36,6 +36,9 @@
                         var secs = Math.floor(time / 10 % 60);
                         var tenths = time % 10;
 
+                        if (time >= 60) {
+                            time = 0;
+                        }
                         if (mins < 10) {
                             mins = "0" + mins;
                         }
