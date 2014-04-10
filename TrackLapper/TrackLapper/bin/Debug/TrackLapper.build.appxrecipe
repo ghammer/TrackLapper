@@ -28,13 +28,19 @@
       <PackagePath>images\smalllogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\adminhammer\Desktop\Git Repo\TrackLapper\TrackLapper\TrackLapper\images\splashscreen.scale-100.png">
-      <PackagePath>images\splashscreen.scale-100.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\adminhammer\Desktop\Git Repo\TrackLapper\TrackLapper\TrackLapper\images\splashscreen.scale-10.png">
+      <PackagePath>images\splashscreen.scale-10.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adminhammer\Desktop\Git Repo\TrackLapper\TrackLapper\TrackLapper\images\SplashScreen.png">
+      <PackagePath>images\SplashScreen.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adminhammer\Desktop\Git Repo\TrackLapper\TrackLapper\TrackLapper\images\storelogo.scale-100.png">
       <PackagePath>images\storelogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\adminhammer\Desktop\Git Repo\TrackLapper\TrackLapper\TrackLapper\images\TrackLapper_Small.png">
+      <PackagePath>images\TrackLapper_Small.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adminhammer\Desktop\Git Repo\TrackLapper\TrackLapper\TrackLapper\js\default.js">
       <PackagePath>js\default.js</PackagePath>

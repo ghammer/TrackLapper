@@ -32,13 +32,14 @@
                 if (running == 1) {
                     setTimeout(function () {
                         time++;
+                        var hours = Math.floor(time / 10 / 60 / 60);
                         var mins = Math.floor(time / 10 / 60);
                         var secs = Math.floor(time / 10 % 60);
                         var tenths = time % 10;
 
-                        if (time >= 60) {
-                            time = 0;
-                        }
+                        ////if (time >= 60) {
+                        ////    time = 0;
+                        //}
                         if (mins < 10) {
                             mins = "0" + mins;
                         }
