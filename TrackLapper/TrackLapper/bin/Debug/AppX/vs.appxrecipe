@@ -63,11 +63,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adminhammer\Desktop\Git Repo\TrackLapper\TrackLapper\TrackLapper\pages\home\home.js">
       <PackagePath>pages\home\home.js</PackagePath>
-      <Modified>2014-04-11T16:47:11.665</Modified>
+      <Modified>2014-04-11T16:48:32.211</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adminhammer\Desktop\Git Repo\TrackLapper\TrackLapper\TrackLapper\pages\page2\page2.js">
       <PackagePath>pages\page2\page2.js</PackagePath>
-      <Modified>2014-04-11T16:25:04.282</Modified>
+      <Modified>2014-04-11T21:08:11.774</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adminhammer\Desktop\Git Repo\TrackLapper\TrackLapper\TrackLapper\pages\home\home.html">
       <PackagePath>pages\home\home.html</PackagePath>
@@ -79,7 +79,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adminhammer\Desktop\Git Repo\TrackLapper\TrackLapper\TrackLapper\pages\page2\page2.html">
       <PackagePath>pages\page2\page2.html</PackagePath>
-      <Modified>2014-04-11T16:25:44.461</Modified>
+      <Modified>2014-04-11T19:35:20.686</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\adminhammer\Desktop\Git Repo\TrackLapper\TrackLapper\TrackLapper\bin\Debug\ReverseMap\resources.pri">
       <PackagePath>resources.pri</PackagePath>

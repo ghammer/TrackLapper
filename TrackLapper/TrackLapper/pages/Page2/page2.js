@@ -28,6 +28,15 @@
                 time = 0
                 document.getElementById("startPause").innerHTML = "Start";
                 document.getElementById("output").innerHTML = "00:00:00";
+                document.getElementById("outputSplit").innerHTML = "00:00:00";
+            }
+
+            split.onclick = function split() {
+                var hours = Math.floor(time / 10 / 60 / 60);
+                var mins = Math.floor(time / 10 / 60);
+                var secs = Math.floor(time / 10 % 60);
+                var tenths = time % 10;
+                document.getElementById("outputSplit").innerHTML = mins + ":" + secs + ":" + "0" + tenths;
             }
 
             function increment() {
