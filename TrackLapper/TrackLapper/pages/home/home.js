@@ -6,9 +6,9 @@
         // populates the page elements with the app's data.
         ready: function (element, options) {
             // TODO: Initialize the page here.
-            log_in_btn.onclick(function () {
-                WinJS.Navigation.navigate("/home/Page2/page2.html")
-            });
+            log_in_btn.onclick = function () {
+                WinJS.Navigation.navigate("/pages/page2/page2.html")
+            };
         }
     });
 })();

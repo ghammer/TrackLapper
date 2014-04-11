@@ -66,9 +66,9 @@
     <Content Include="pages\home\home.html" />
     <Content Include="pages\home\home.js" />
     <Content Include="default.html" />
-    <Content Include="pages\Page2\page2.css" />
-    <Content Include="pages\Page2\page2.html" />
-    <Content Include="pages\Page2\page2.js" />
+    <Content Include="pages\page2\page2.css" />
+    <Content Include="pages\page2\page2.html" />
+    <Content Include="pages\page2\page2.js" />
     <None Include="TrackLapper_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
