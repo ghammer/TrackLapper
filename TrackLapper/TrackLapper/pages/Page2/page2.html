@@ -5,7 +5,7 @@
     <title>page2</title>
 
     <!-- WinJS references -->
-    <link href="//Microsoft.WinJS.2.0/css/ui-dark.css" rel="stylesheet" />
+    <link href="//Microsoft.WinJS.2.0/css/ui-light.css" rel="stylesheet" />
     <script src="//Microsoft.WinJS.2.0/js/base.js"></script>
     <script src="//Microsoft.WinJS.2.0/js/ui.js"></script>
 
@@ -17,33 +17,18 @@
         <header aria-label="Header content" role="banner">
             <button data-win-control="WinJS.UI.BackButton"></button>
             <h1 class="titlearea win-type-ellipsis">
-                <span class="pagetitle">Welcome to page2</span>
+                <span class="pagetitle">TrackLapper</span>
             </h1>
         </header>
         <section aria-label="Main content" role="main">
-            <style>
-                #output {
-                    width: 600px;
-                    height: 200px;
-                    background-color: #CCC;
-                    border: 1px solid #808080;
-                    font-size: 150px;
-                }
-                #outputSplit {
-                    width: 600px;
-                    height: 200px;
-                    background-color: #CCC;
-                    border: 1px solid #808080;
-                    font-size: 150px;
-                }
-            </style>
-            <div id="controls" align="center">
-                <p id="output"></p>
-                <p id="outputSplit"></p>
+                <div class="output" id="output"></div>
+                <div class="output" id="outputSplit"></div>
+                <output id="splitLog"></output>
                 <button id="startPause" onclick="startPause()">Start</button>
                 <button id="reset" onclick="reset()">Reset</button>
                 <button id="split" onclick="split()">Split</button>
-            </div>
+                <p id="startingLocation"></p>
+                <p id="currentPosition"></p>
         </section>
     </div>
 </body>

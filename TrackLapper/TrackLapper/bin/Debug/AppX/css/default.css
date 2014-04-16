@@ -3,6 +3,13 @@
     width: 100%;
 }
 
+#output {
+    height: 200px;
+    border: 1px #808080;
+    font-size: 150px;
+    margin-bottom: 40px
+}
+
 .fragment {
     /* Define a grid with rows for a banner and a body */
     -ms-grid-columns: 1fr;

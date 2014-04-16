@@ -28,3 +28,4 @@ C:\Users\adminhammer\Desktop\Git Repo\TrackLapper\TrackLapper\TrackLapper\bld\De
 C:\Users\adminhammer\Desktop\Git Repo\TrackLapper\TrackLapper\TrackLapper\bld\Debug\qualifiers.txt.intermediate
 C:\Users\adminhammer\Desktop\Git Repo\TrackLapper\TrackLapper\TrackLapper\bld\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\adminhammer\Desktop\Git Repo\TrackLapper\TrackLapper\TrackLapper\bld\Debug\ProjectArchitectures.txt
+C:\Users\adminhammer\Desktop\Git Repo\TrackLapper\TrackLapper\TrackLapper\bld\Debug\MobileServices.pri.xml

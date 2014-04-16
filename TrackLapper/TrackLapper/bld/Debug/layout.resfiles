@@ -5,10 +5,16 @@ images\smalllogo.scale-100.png
 images\splashscreen.scale-100.png
 images\storelogo.scale-100.png
 js\default.js
+js\MobileServices.intellisense.js
+js\MobileServices.js
+js\MobileServices.min.js
+js\MobileServices.pri
 js\navigator.js
+packages.config
 pages\home\home.css
 pages\home\home.html
 pages\home\home.js
 pages\page2\page2.css
 pages\page2\page2.html
 pages\page2\page2.js
+services\mobile services\TrackLapper\service.js
