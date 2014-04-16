@@ -2,3 +2,78 @@
     margin-left: 120px;
     margin-right: 120px;
 }
+
+.output {
+    height: 180px;
+    font-size: 170px;
+    text-align: center;
+    width: 50%;
+    float: left;
+    position: relative;
+    margin-left: 5%;
+}
+
+.buttonSpace {
+    height: 110px;
+    width: 45%;
+    display: inline;
+    float: left;
+    position: relative;
+    margin-top: 2%;
+    margin-left: 7.5%;
+}
+
+.button1 {
+    height: 100px;
+    width: 200px;
+}
+
+.button2 {
+    height: 100px;
+    width: 200px;
+}
+
+.button3 {
+    height: 100px;
+    width: 200px;
+}
+
+.geo {
+    position: relative;
+    height: 30px;
+    width: 50%;
+    margin-top: 37%;
+    margin-left: 7.5%;
+}
+
+.list {
+    float: right;
+    height: 600px;
+    width: 450px;
+    margin-right: 11%;
+    margin-top: -38%
+}
+
+.smallListIconTextItem
+{
+    width: 100%;
+    height: 70px;
+    padding: 5px;
+    overflow: hidden;
+}
+
+    .smallListIconTextItem .smallListIconTextItem-Detail
+    {
+        margin: 5px;
+    }
+
+   .listLayoutTopHeaderTemplateRoot {
+        font-size: larger;
+        margin-left: 16px;
+    }
+    
+/* CSS applied to the ListViews in this sample */
+#listView
+{
+    height: 280px;
+}

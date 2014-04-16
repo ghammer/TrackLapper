@@ -4,4 +4,7 @@
     <ReferenceCachePath>C:\Users\adminhammer\AppData\Local\Temp\2\TrackLapper_refcache</ReferenceCachePath>
     <AutoRefresh>false</AutoRefresh>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebuggerFlavor>AppHostSimulatorDebugger</DebuggerFlavor>
+  </PropertyGroup>
 </Project>

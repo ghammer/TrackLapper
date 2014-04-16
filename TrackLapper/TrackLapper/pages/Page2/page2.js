@@ -6,28 +6,30 @@
     WinJS.UI.Pages.define("/pages/Page2/page2.html", {
         // This function is called whenever a user navigates to this page. It
         // populates the page elements with the app's data.
+        init: function () {
+            WinJS.Namespace.define("page2", {
+                splits: new WinJS.Binding.List()
+            });
+        },
+
         ready: function (element, options) {
             // TODO: Initialize the page here.
             var time = 0;
             var running = 0;
+            var elapsed = 0;
 
             //start timer and gps
             startPause.onclick = function startPause() {
                 if (running == 0) {
-                    getLocation();
+                    startTracking();
                     running = 1;
                     increment();
                     //change button inner html to "Pause" from "Start"
                     document.getElementById("startPause").innerHTML = "Pause";
-                    //supposed to take the split time once they come back to the position they started from
-                    if (getLocation == getLocation & running > 1) {
-                        split();
-                    }
                 }
 
                 else {
                     running = 0;
-                    //clearWatch(); //stops watchPosition() method
                     document.getElementById("startPause").innerHTML = "Resume";
                 }
             }
@@ -44,10 +46,11 @@
             }
 
             split.onclick = function split() {
-                var hours = Math.floor(time / 10 / 60 / 60);
-                var mins = Math.floor(time / 10 / 60);
-                var secs = Math.floor(time / 10 % 60);
-                var tenths = time % 10;
+                elapsed -= running;
+                var hours = Math.floor(running / 10 / 60 / 60);
+                var mins = Math.floor(running / 10 / 60);
+                var secs = Math.floor(running / 10 % 60);
+                var tenths = running % 10;
                 //output box display of splits
                 document.getElementById("outputSplit").innerHTML = mins + ":" + secs + ":" + "0" + tenths;
             }
@@ -77,31 +80,82 @@
                 }
             }
 
-            function getLocation() {
-                //var startingLocation = document.getElementById("startPause")
-                //var currentPosition = document.getElementById("startPause")
-                //if there is a gps signal
-                if (navigator.geolocation) {
-                    //get current posotion of the device
-                    navigator.geolocation.getCurrentPosition(showPosition)
-                    var startingLocation = navigator.geolocation.getCurrentPosition(showPosition)
-                    //continue getting the position
-                    var currentPosition = navigator.geolocation.watchPosition(showPosition);
-                    navigator.geolocation.watchPosition(showPosition)
-                    document.getElementById("startingLocation").innerHTML = startingLocation;
-                    document.getElementById("currentPosition").innerHTML = currentPosition
+            var geolocator = null;
 
-                }
-                else {
-                    startingLocation.innerHTML = "Geolocation is not supported on this platform."
-                    currentPosition.innerHTML = "Geolocation is not supported on this platform.";
-                }
-                function showPosition(position) {
-                    startingLocation.innerHTML = "Latitude: " + position.coords.latitude +
-                        "<br>Longitude: " + position.coords.longitude;
-                    currentPosition.innerHTML = position.coords.latitude + "<br>" + position.coords.longitude;
+            function getStatusStr(status) {
+                switch (status) {
+                    case Windows.Devices.Geolocation.PositionStatus.ready:
+                        return "Ready";
+                        break;
+                    case Windows.Devices.Geolocation.PositionStatus.initializing:
+                        return "Initializing";
+                        break;
+                    case Windows.Devices.Geolocation.PositionStatus.noData:
+                        return "noData";
+                        break;
+                    case Windows.Devices.Geolocation.PositionStatus.disabled:
+                        return "disabled";
+                        break;
+                    case Windows.Devices.Geolocation.PositionStatus.notInitialized:
+                        return "notInitialized";
+                        break;
+                    case Windows.Devices.Geolocation.PositionStatus.notAvailable:
+                        return "notAvailable";
+                        break;
+                    default:
+                        break;
                 }
             }
+
+            function startTracking() {
+                if (geolocator == null) {
+                    geolocator = new Windows.Devices.Geolocation.Geolocator();
+                }
+                if (geolocator != null) {
+                    geolocator.addEventListener("currentPosition", onPositionChanged);
+                    geolocator.addEventListener("statuschanged", onStatusChanged);
+                }
+            }
+
+            function stoptracking() {
+                if (geolocator != null) {
+                    geolocator.removeEventListener("currentPosition", onPositionChanged);
+                }
+                document.getElementById("startingLocation").innerHTML = "waiting for update...";
+                document.getElementById("status").innerHTML = "waiting for update...";
+            }
+
+            function onPositionChanged(args) {
+                var position = args.position;
+                //use the position ifnormation (lat/lon/accuracy) to do some work
+                document.getElementById("startingLocation").innerHTML = position.coordinate.latitude + "," + position.coordinate.longitude;
+                document.getElementById("status").innerHTML =
+                        getStatusStr(geolocator.locationStatus);
+            }
+
+            // Handle change in status to display an appropriate message.        
+            function onStatusChanged(args) {
+                var status = args.status;
+                //handle the new status
+            }
+
+            function init() {
+                document.getElementById("startingLocation").innerHTML = "waiting for update...";
+                document.getElementById("status").innerHTML ="waiting for update...";
+            }
+
+            var items = [];
+
+            split.onclick = function() {
+                var current = running;
+                    items.push(current);
+            }
+
+
+            WinJS.Namespace.define("Sample.ListView", {
+                data: new WinJS.Binding.List(items)
+            });
+            WinJS.UI.processAll();
         },
 
         unload: function () {
