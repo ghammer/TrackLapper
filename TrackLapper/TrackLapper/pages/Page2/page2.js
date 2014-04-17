@@ -12,8 +12,15 @@
         ready: function (element, options) {
             // TODO: Initialize the page here.
             var time = 0;
+            var currentTime = 0;
             var running = 0;
-            var elapsed = 0;
+            var TOLsplit = 0;
+            var splitTime = 0;
+            var splitOutput = '';
+            var hours = Math.floor(time / 10 / 60 / 60);
+            var mins = Math.floor(time / 10 / 60);
+            var secs = Math.floor(time / 10 % 60);
+            var tenths = time % 10;
 
             //start timer and gps
             startPause.onclick = function startPause() {
@@ -36,33 +43,54 @@
                 time = 0
                 //changes inner html to "Start" from "Resume"
                 document.getElementById("startPause").innerHTML = "Start";
-                //resets output box to "00:00:00"
-                document.getElementById("output").innerHTML = "00:00:00";
-                //resets output box to "00:00:00"
-                document.getElementById("outputSplit").innerHTML = "00:00:00";
+                //resets output box to "00:00:00:00"
+                document.getElementById("output").innerHTML = "00:00:00:00";
+                //resets output box to "00:00:00:00"
+                document.getElementById("outputSplit").innerHTML = "00:00:00:00";
             }
 
             split.onclick = function split() {
-                //elapsed -= running;
-                var hours = Math.floor(time / 10 / 60 / 60);
-                var mins = Math.floor(time / 10 / 60);
-                var secs = Math.floor(time / 10 % 60);
-                var tenths = time % 10;
-                //output box display of splits
-                document.getElementById("outputSplit").innerHTML = mins + ":" + secs + ":" + "0" + tenths;
+
+                splitTime = currentTime - TOLsplit;
+
+                TOLsplit = currentTime;
+
+                var splitOutput = splitTime.toString();
+
+                for (var i = 0; i < splitOutput.length; i++) {
+                    splitOutput[i + 1] = splitOutput.split(":");
+                }
+                //for (var i = splitTime.toString.length; i < 6; i++) {
+                //    splitTime = "0" + splitTime.toString;
+
+                //}
+
+                //console.log(splitTime);
+
+                //splitOutput = splitTime.substr(0, 1) + ':' + splitTime.substr(2, 3) + ':' + splitTime.substr(4, 5);
+
+                //hours = Math.floor(TOLsplit / 10 / 60 / 60);
+                //mins = Math.floor(TOLsplit / 10 / 60);
+                //secs = Math.floor(TOLsplit / 10 % 60);
+                //tenths = TOLsplit % 10;
+
+                //document.getElementById("outputSplit").innerHTML = "0" + hours + ":" + mins + ":" + secs + ":" + "0" + tenths;
+
+
+                document.getElementById("outputSplit").innerHTML = splitOutput;
             }
 
             function increment() {
                 if (running == 1) {
                     setTimeout(function () {
                         time++;
-                        var hours = Math.floor(time / 10 / 60 / 60);
-                        var mins = Math.floor(time / 10 / 60);
-                        var secs = Math.floor(time / 10 % 60);
-                        var tenths = time % 10;
+                        hours = Math.floor(time / 10 / 60 / 60);
+                        mins = Math.floor(time / 10 / 60);
+                        secs = Math.floor(time / 10 % 60);
+                        tenths = time % 10;
 
-                        if (time >= 60000) {
-                            time = 0;
+                        if (hours >= 60000) {
+                            hours = "0" + hours;
                         }
                         if (mins < 10) {
                             mins = "0" + mins;
@@ -71,8 +99,11 @@
                             secs = "0" + secs;
                         }
 
-                        document.getElementById("output").innerHTML = mins + ":" + secs + ":" + "0" + tenths;
+                        document.getElementById("output").innerHTML = hours + ":" + mins + ":" + secs + ":" + "0" + tenths;
+                        currentTime = hours + mins + secs + "0" + tenths;
+                        console.log(currentTime);
                         increment();
+                        
                     }, 100);
                 }
             }

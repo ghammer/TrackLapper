@@ -29,3 +29,19 @@ C:\Users\adminhammer\Desktop\Git Repo\TrackLapper\TrackLapper\TrackLapper\bld\De
 C:\Users\adminhammer\Desktop\Git Repo\TrackLapper\TrackLapper\TrackLapper\bld\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\adminhammer\Desktop\Git Repo\TrackLapper\TrackLapper\TrackLapper\bld\Debug\ProjectArchitectures.txt
 C:\Users\adminhammer\Desktop\Git Repo\TrackLapper\TrackLapper\TrackLapper\bld\Debug\MobileServices.pri.xml
+C:\Users\Glen\Documents\GitHub\TrackLapper\TrackLapper\TrackLapper\bin\Debug\ReverseMap\resources.pri
+C:\Users\Glen\Documents\GitHub\TrackLapper\TrackLapper\TrackLapper\bin\Debug\AppxManifest.xml
+C:\Users\Glen\Documents\GitHub\TrackLapper\TrackLapper\TrackLapper\bin\Debug\TrackLapper.build.appxrecipe
+C:\Users\Glen\Documents\GitHub\TrackLapper\TrackLapper\TrackLapper\bld\Debug\priconfig.xml
+C:\Users\Glen\Documents\GitHub\TrackLapper\TrackLapper\TrackLapper\bld\Debug\priconfig.xml.intermediate
+C:\Users\Glen\Documents\GitHub\TrackLapper\TrackLapper\TrackLapper\bld\Debug\layout.resfiles
+C:\Users\Glen\Documents\GitHub\TrackLapper\TrackLapper\TrackLapper\bld\Debug\layout.resfiles.intermediate
+C:\Users\Glen\Documents\GitHub\TrackLapper\TrackLapper\TrackLapper\bld\Debug\resources.resfiles
+C:\Users\Glen\Documents\GitHub\TrackLapper\TrackLapper\TrackLapper\bld\Debug\resources.resfiles.intermediate
+C:\Users\Glen\Documents\GitHub\TrackLapper\TrackLapper\TrackLapper\bld\Debug\pri.resfiles
+C:\Users\Glen\Documents\GitHub\TrackLapper\TrackLapper\TrackLapper\bld\Debug\pri.resfiles.intermediate
+C:\Users\Glen\Documents\GitHub\TrackLapper\TrackLapper\TrackLapper\bld\Debug\qualifiers.txt
+C:\Users\Glen\Documents\GitHub\TrackLapper\TrackLapper\TrackLapper\bld\Debug\qualifiers.txt.intermediate
+C:\Users\Glen\Documents\GitHub\TrackLapper\TrackLapper\TrackLapper\bld\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\Glen\Documents\GitHub\TrackLapper\TrackLapper\TrackLapper\bld\Debug\MobileServices.pri.xml
+C:\Users\Glen\Documents\GitHub\TrackLapper\TrackLapper\TrackLapper\bld\Debug\ProjectArchitectures.txt
