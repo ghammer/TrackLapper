@@ -7,9 +7,6 @@
         // This function is called whenever a user navigates to this page. It
         // populates the page elements with the app's data.
         init: function () {
-            WinJS.Namespace.define("page2", {
-                splits: new WinJS.Binding.List()
-            });
         },
 
         ready: function (element, options) {
@@ -46,11 +43,11 @@
             }
 
             split.onclick = function split() {
-                elapsed -= running;
-                var hours = Math.floor(running / 10 / 60 / 60);
-                var mins = Math.floor(running / 10 / 60);
-                var secs = Math.floor(running / 10 % 60);
-                var tenths = running % 10;
+                //elapsed -= running;
+                var hours = Math.floor(time / 10 / 60 / 60);
+                var mins = Math.floor(time / 10 / 60);
+                var secs = Math.floor(time / 10 % 60);
+                var tenths = time % 10;
                 //output box display of splits
                 document.getElementById("outputSplit").innerHTML = mins + ":" + secs + ":" + "0" + tenths;
             }
@@ -142,20 +139,7 @@
             function init() {
                 document.getElementById("startingLocation").innerHTML = "waiting for update...";
                 document.getElementById("status").innerHTML ="waiting for update...";
-            }
-
-            var items = [];
-
-            split.onclick = function() {
-                var current = running;
-                    items.push(current);
-            }
-
-
-            WinJS.Namespace.define("Sample.ListView", {
-                data: new WinJS.Binding.List(items)
-            });
-            WinJS.UI.processAll();
+            }            
         },
 
         unload: function () {
