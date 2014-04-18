@@ -6,8 +6,6 @@
     WinJS.UI.Pages.define("/pages/Page2/page2.html", {
         // This function is called whenever a user navigates to this page. It
         // populates the page elements with the app's data.
-        init: function () {
-        },
 
         ready: function (element, options) {
             // TODO: Initialize the page here.
@@ -17,16 +15,13 @@
             var TOLsplit = 0;
             var splitTime = 0;
             var splitOutput = '';
-            var hours = Math.floor(time / 10 / 60 / 60);
-            var mins = Math.floor(time / 10 / 60);
-            var secs = Math.floor(time / 10 % 60);
-            var tenths = time % 10;
 
             //start timer and gps
             startPause.onclick = function startPause() {
                 if (running == 0) {
                     startTracking();
                     running = 1;
+                    console.log(running)
                     increment();
                     //change button inner html to "Pause" from "Start"
                     document.getElementById("startPause").innerHTML = "Pause";
@@ -44,54 +39,52 @@
                 //changes inner html to "Start" from "Resume"
                 document.getElementById("startPause").innerHTML = "Start";
                 //resets output box to "00:00:00:00"
-                document.getElementById("output").innerHTML = "00:00:00:00";
+                document.getElementById("output").innerHTML = "00:00:00";
                 //resets output box to "00:00:00:00"
-                document.getElementById("outputSplit").innerHTML = "00:00:00:00";
+                document.getElementById("outputSplit").innerHTML = "00:00:00";
             }
 
             split.onclick = function split() {
 
                 splitTime = currentTime - TOLsplit;
+                console.log(splitTime);
 
                 TOLsplit = currentTime;
+                console.log(TOLsplit);
 
-                var splitOutput = splitTime.toString();
+                var mins = Math.floor(splitTime / 10 / 60);
+                console.log(mins);
 
-                for (var i = 0; i < splitOutput.length; i++) {
-                    splitOutput[i + 1] = splitOutput.split(":");
+                var secs = Math.floor(splitTime / 10 % 60);
+                console.log(secs);
+
+                var tenths = splitTime % 10;
+                console.log(tenths);
+                console.log(splitTime);
+
+                if (mins < 10) {
+                    mins = "0" + mins;
                 }
-                //for (var i = splitTime.toString.length; i < 6; i++) {
-                //    splitTime = "0" + splitTime.toString;
+                if (secs < 10) {
+                    secs = "0" + secs;
+                }
 
-                //}
+                var split = document.getElementById("outputSplit").innerHTML = mins + ":" + secs + ":" + tenths;
+                TrackLapper.splitList.push(split)
 
-                //console.log(splitTime);
+                //document.getElementById("listView").innerHTML = splitListView;
 
-                //splitOutput = splitTime.substr(0, 1) + ':' + splitTime.substr(2, 3) + ':' + splitTime.substr(4, 5);
-
-                //hours = Math.floor(TOLsplit / 10 / 60 / 60);
-                //mins = Math.floor(TOLsplit / 10 / 60);
-                //secs = Math.floor(TOLsplit / 10 % 60);
-                //tenths = TOLsplit % 10;
-
-                //document.getElementById("outputSplit").innerHTML = "0" + hours + ":" + mins + ":" + secs + ":" + "0" + tenths;
-
-
-                document.getElementById("outputSplit").innerHTML = splitOutput;
+                //document.getElementById("outputSplit").innerHTML = splitTime;
             }
 
             function increment() {
                 if (running == 1) {
                     setTimeout(function () {
                         time++;
-                        hours = Math.floor(time / 10 / 60 / 60);
-                        mins = Math.floor(time / 10 / 60);
-                        secs = Math.floor(time / 10 % 60);
-                        tenths = time % 10;
+                        var mins = Math.floor(time / 10 / 60);
+                        var secs = Math.floor(time / 10 % 60);
+                        var tenths = time % 10;
 
-                        if (hours >= 60000) {
-                            hours = "0" + hours;
-                        }
                         if (mins < 10) {
                             mins = "0" + mins;
                         }
@@ -99,11 +92,10 @@
                             secs = "0" + secs;
                         }
 
-                        document.getElementById("output").innerHTML = hours + ":" + mins + ":" + secs + ":" + "0" + tenths;
-                        currentTime = hours + mins + secs + "0" + tenths;
+                        document.getElementById("output").innerHTML = mins + ":" + secs + ":" +  "0" + tenths;
+                        currentTime = mins + secs + tenths;
                         console.log(currentTime);
                         increment();
-                        
                     }, 100);
                 }
             }

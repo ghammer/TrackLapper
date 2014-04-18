@@ -14,7 +14,13 @@
     <script src="page2.js"></script>
 </head>
 <body>
+
     <div class="page2 fragment">
+        <div id="splitTemplate" data-win-control="WinJS.Binding.Template" style="display: none">
+            <div class="splitWrapper">
+                <h4 data-win-bind="textContent: split"></h4>
+            </div>
+        </div>
         <header aria-label="Header content" role="banner">
             <button data-win-control="WinJS.UI.BackButton"></button>
             <h1 class="titlearea win-type-ellipsis">
@@ -34,8 +40,12 @@
                 <p id="currentPosition"></p>
                 <p id="status"></p>
             </div>
-            <div class="list" data-win-control="WinJS.UI.ListView">
-                
+            <div class="list" id="listView" data-win-control="WinJS.UI.ListView"
+                 data-win-options="{
+                 itemDataSource: TrackLapper.splitList.dataSource,
+                 selectionMode: 'none',
+                 layout: { type: WinJS.UI.ListLayout }
+                 }">
             </div>
         </section>
     </div>
