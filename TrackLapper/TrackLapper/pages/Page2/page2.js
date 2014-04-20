@@ -1,20 +1,33 @@
-﻿// For an introduction to the Page Control template, see the following documentation:
-// http://go.microsoft.com/fwlink/?LinkId=232511
-(function () {
+﻿(function () {
     "use strict";
 
     WinJS.UI.Pages.define("/pages/Page2/page2.html", {
-        // This function is called whenever a user navigates to this page. It
-        // populates the page elements with the app's data.
 
         ready: function (element, options) {
-            // TODO: Initialize the page here.
             var time = 0;
             var currentTime = 0;
             var running = 0;
             var TOLsplit = 0;
             var splitTime = 0;
             var splitOutput = '';
+
+            //var start = new Date().getTime(),
+            //           time = 0,
+            //           elapsed = '0.0';
+
+            //function instance() {
+            //    time += 100;
+
+            //    elapsed = Math.floor(time / 100) / 10;
+            //    if (Math.round(elapsed) == elapsed) { elapsed += '.0'; }
+
+            //    document.getElementById("output").innerHTML = elapsed;
+
+            //    var diff = (new Date().getTime() - start) - time;
+            //    window.setTimeout(instance, (100 - diff));
+            //}
+
+            //window.setTimeout(instance, 100);
 
             //start timer and gps
             startPause.onclick = function startPause() {
