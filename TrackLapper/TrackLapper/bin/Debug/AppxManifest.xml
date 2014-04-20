@@ -7,10 +7,10 @@
 
     For more information on package manifest files, see http://go.microsoft.com/fwlink/?LinkID=241727
   -->
-  <Identity Name="1684fa1a-6680-4252-bbce-0752eb90079a" Version="1.0.0.0" Publisher="CN=adminhammer" ProcessorArchitecture="neutral" />
+  <Identity Name="11039getHAMMEREDStudios.TrackLapper" Version="1.1.0.0" Publisher="CN=694143B8-3675-4614-8704-6D4BE68F79CD" ProcessorArchitecture="neutral" />
   <Properties>
     <DisplayName>TrackLapper</DisplayName>
-    <PublisherDisplayName>adminhammer</PublisherDisplayName>
+    <PublisherDisplayName>getHAMMERED Studios</PublisherDisplayName>
     <Logo>images\storelogo.png</Logo>
   </Properties>
   <Prerequisites>

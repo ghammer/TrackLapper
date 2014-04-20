@@ -3,6 +3,7 @@
   <PropertyGroup>
     <ReferenceCachePath>C:\Users\Glen\AppData\Local\Temp\ga0bkawr_TrackLapper_refcache</ReferenceCachePath>
     <AutoRefresh>false</AutoRefresh>
+    <AppxShowAllApps>False</AppxShowAllApps>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DebuggerFlavor>AppHostLocalDebugger</DebuggerFlavor>

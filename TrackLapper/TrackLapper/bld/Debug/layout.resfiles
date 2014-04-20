@@ -1,5 +1,6 @@
 css\default.css
 default.html
+Fonts\LiveSymbol.ttf
 images\logo.scale-100.png
 images\smalllogo.scale-100.png
 images\smalllogo100.png
@@ -11,6 +12,7 @@ js\MobileServices.js
 js\MobileServices.min.js
 js\MobileServices.pri
 js\navigator.js
+js\wl.js
 packages.config
 pages\home\home.css
 pages\home\home.html

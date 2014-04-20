@@ -47,20 +47,12 @@
             split.onclick = function split() {
 
                 splitTime = currentTime - TOLsplit;
-                console.log(splitTime);
 
                 TOLsplit = currentTime;
-                console.log(TOLsplit);
 
                 var mins = Math.floor(splitTime / 10 / 60);
-                console.log(mins);
-
                 var secs = Math.floor(splitTime / 10 % 60);
-                console.log(secs);
-
-                var tenths = splitTime % 10;
-                console.log(tenths);
-                console.log(splitTime);
+                var tenths = splitTime % 100;
 
                 if (mins < 10) {
                     mins = "0" + mins;
@@ -71,10 +63,6 @@
 
                 var split = document.getElementById("outputSplit").innerHTML = mins + ":" + secs + ":" + tenths;
                 TrackLapper.splitList.push(split)
-
-                //document.getElementById("listView").innerHTML = splitListView;
-
-                //document.getElementById("outputSplit").innerHTML = splitTime;
             }
 
             function increment() {

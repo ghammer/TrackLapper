@@ -5,19 +5,19 @@
     <WindowsUser>Glen</WindowsUser>
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
-    <PackageIdentityName>1684fa1a-6680-4252-bbce-0752eb90079a</PackageIdentityName>
-    <RegisteredManifestChecksum>099F2E77E81F28785371FFD996493325E289D757435697FF3C18BDD1C612DF5A</RegisteredManifestChecksum>
-    <RegisteredPackageMoniker>1684fa1a-6680-4252-bbce-0752eb90079a_1.0.0.0_neutral__r0519bevys8k6</RegisteredPackageMoniker>
-    <RegisteredUserModeAppID>1684fa1a-6680-4252-bbce-0752eb90079a_r0519bevys8k6!App</RegisteredUserModeAppID>
-    <RegisteredPackageID>1684fa1a-6680-4252-bbce-0752eb90079a</RegisteredPackageID>
-    <RegisteredPackagePublisher>CN=adminhammer</RegisteredPackagePublisher>
-    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+    <PackageIdentityName>11039getHAMMEREDStudios.TrackLapper</PackageIdentityName>
+    <RegisteredManifestChecksum>66381150A9544A92B5977347EF57820134E1150377AF6EA99316E0897B391264</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>11039getHAMMEREDStudios.TrackLapper_1.1.0.0_neutral__t2ftjfh0vpnq8</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>11039getHAMMEREDStudios.TrackLapper_t2ftjfh0vpnq8!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>11039getHAMMEREDStudios.TrackLapper</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=694143B8-3675-4614-8704-6D4BE68F79CD</RegisteredPackagePublisher>
+    <RegisteredVersion>1.1.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
     <AppXManifest Include="C:\Users\Glen\Documents\GitHub\TrackLapper\TrackLapper\TrackLapper\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-04-18T16:43:06.848</Modified>
+      <Modified>2014-04-20T00:32:18.514</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -32,6 +32,10 @@
     <AppxPackagedFile Include="C:\Users\Glen\Documents\GitHub\TrackLapper\TrackLapper\TrackLapper\pages\page2\page2.css">
       <PackagePath>pages\page2\page2.css</PackagePath>
       <Modified>2014-04-18T21:23:54.876</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Glen\Documents\GitHub\TrackLapper\TrackLapper\TrackLapper\Fonts\LiveSymbol.ttf">
+      <PackagePath>Fonts\LiveSymbol.ttf</PackagePath>
+      <Modified>2014-04-19T22:31:37.271</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Glen\Documents\GitHub\TrackLapper\TrackLapper\TrackLapper\images\smalllogo.scale-100.png">
       <PackagePath>images\smalllogo.scale-100.png</PackagePath>
@@ -77,13 +81,17 @@
       <PackagePath>js\navigator.js</PackagePath>
       <Modified>2014-04-17T05:05:59.471</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Glen\Documents\GitHub\TrackLapper\TrackLapper\TrackLapper\js\wl.js">
+      <PackagePath>js\wl.js</PackagePath>
+      <Modified>2014-04-19T22:31:36.318</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Glen\Documents\GitHub\TrackLapper\TrackLapper\TrackLapper\pages\home\home.js">
       <PackagePath>pages\home\home.js</PackagePath>
-      <Modified>2014-04-18T21:43:13.169</Modified>
+      <Modified>2014-04-20T00:32:12.551</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Glen\Documents\GitHub\TrackLapper\TrackLapper\TrackLapper\pages\page2\page2.js">
       <PackagePath>pages\page2\page2.js</PackagePath>
-      <Modified>2014-04-18T22:21:26.062</Modified>
+      <Modified>2014-04-20T01:48:14.338</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Glen\Documents\GitHub\TrackLapper\TrackLapper\TrackLapper\services\mobile services\TrackLapper\service.js">
       <PackagePath>services\mobile services\TrackLapper\service.js</PackagePath>
@@ -91,7 +99,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Glen\Documents\GitHub\TrackLapper\TrackLapper\TrackLapper\packages.config">
       <PackagePath>packages.config</PackagePath>
-      <Modified>2014-04-17T05:05:59.474</Modified>
+      <Modified>2014-04-19T22:31:38.036</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Glen\Documents\GitHub\TrackLapper\TrackLapper\TrackLapper\pages\home\home.html">
       <PackagePath>pages\home\home.html</PackagePath>
@@ -99,7 +107,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Glen\Documents\GitHub\TrackLapper\TrackLapper\TrackLapper\default.html">
       <PackagePath>default.html</PackagePath>
-      <Modified>2014-04-17T05:05:59.411</Modified>
+      <Modified>2014-04-19T23:24:34.421</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Glen\Documents\GitHub\TrackLapper\TrackLapper\TrackLapper\pages\page2\page2.html">
       <PackagePath>pages\page2\page2.html</PackagePath>
@@ -107,7 +115,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Glen\Documents\GitHub\TrackLapper\TrackLapper\TrackLapper\bin\Debug\ReverseMap\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2014-04-18T16:43:06.176</Modified>
+      <Modified>2014-04-20T00:32:18.041</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
