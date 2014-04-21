@@ -34,6 +34,10 @@
       <PackagePath>images\logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Glen\Documents\GitHub\TrackLapper\TrackLapper\TrackLapper\images\smalllogo.scale-180.png">
+      <PackagePath>images\smalllogo.scale-180.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Glen\Documents\GitHub\TrackLapper\TrackLapper\TrackLapper\images\smalllogo100.png">
       <PackagePath>images\smalllogo100.png</PackagePath>
     </AppxPackagedFile>

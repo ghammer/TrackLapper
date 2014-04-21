@@ -1,6 +1,22 @@
 ﻿(function () {
     "use strict";
 
+    var activation = Windows.ApplicationModel.Activation;
+    var app = WinJS.Application;
+
+    app.onactivated = function (args) {
+        if (args.detail.kind === activation.ActivationKind.launch) {
+            debugger;
+            args.setPromise(WinJS.UI.processAll().
+                done(function () {
+
+                    // Add an event handler to the button.
+                    document.querySelector("#startPause").addEventListener("click",
+                        getLoc);
+                }));
+        }
+    };
+
     WinJS.UI.Pages.define("/pages/Page2/page2.html", {
 
         ready: function (element, options) {
@@ -10,29 +26,11 @@
             var TOLsplit = 0;
             var splitTime = 0;
             var splitOutput = '';
-            
-            //var start = new Date().getTime(),
-            //           time = 0,
-            //           elapsed = '0.0';
-
-            //function instance() {
-            //    time += 100;
-
-            //    elapsed = Math.floor(time / 100) / 10;
-            //    if (Math.round(elapsed) == elapsed) { elapsed += '.0'; }
-
-            //    document.getElementById("output").innerHTML = elapsed;
-
-            //    var diff = (new Date().getTime() - start) - time;
-            //    window.setTimeout(instance, (100 - diff));
-            //}
-
-            //window.setTimeout(instance, 100);
 
             //start timer and gps
             startPause.onclick = function startPause() {
                 if (running == 0) {
-                    startTracking();
+                    //startTracking();
                     running = 1;
                     console.log(running)
                     increment();
@@ -93,87 +91,79 @@
                             secs = "0" + secs;
                         }
 
-                        document.getElementById("output").innerHTML = mins + ":" + secs + ":" +  "0" + tenths;
+                        document.getElementById("output").innerHTML = mins + ":" + secs + ":" + "0" + tenths;
                         currentTime = mins + secs + tenths;
                         console.log(currentTime);
                         increment();
                     }, 100);
                 }
             }
-
-            var geolocator = null;
-
-            function getStatusStr(status) {
-                switch (status) {
-                    case Windows.Devices.Geolocation.PositionStatus.ready:
-                        return "Ready";
-                        break;
-                    case Windows.Devices.Geolocation.PositionStatus.initializing:
-                        return "Initializing";
-                        break;
-                    case Windows.Devices.Geolocation.PositionStatus.noData:
-                        return "noData";
-                        break;
-                    case Windows.Devices.Geolocation.PositionStatus.disabled:
-                        return "disabled";
-                        break;
-                    case Windows.Devices.Geolocation.PositionStatus.notInitialized:
-                        return "notInitialized";
-                        break;
-                    case Windows.Devices.Geolocation.PositionStatus.notAvailable:
-                        return "notAvailable";
-                        break;
-                    default:
-                        break;
-                }
-            }
-
-            function startTracking() {
-                if (geolocator == null) {
-                    geolocator = new Windows.Devices.Geolocation.Geolocator();
-                }
-                if (geolocator != null) {
-                    geolocator.addEventListener("currentPosition", onPositionChanged);
-                    geolocator.addEventListener("statuschanged", onStatusChanged);
-                }
-            }
-
-            function stoptracking() {
-                if (geolocator != null) {
-                    geolocator.removeEventListener("currentPosition", onPositionChanged);
-                }
-                document.getElementById("startingLocation").innerHTML = "waiting for update...";
-                document.getElementById("status").innerHTML = "waiting for update...";
-            }
-
-            function onPositionChanged(args) {
-                var position = args.position;
-                //use the position ifnormation (lat/lon/accuracy) to do some work
-                document.getElementById("startingLocation").innerHTML = position.coordinate.latitude + "," + position.coordinate.longitude;
-                document.getElementById("status").innerHTML =
-                        getStatusStr(geolocator.locationStatus);
-            }
-
-            // Handle change in status to display an appropriate message.        
-            function onStatusChanged(args) {
-                var status = args.status;
-                //handle the new status
-            }
-
-            function init() {
-                document.getElementById("startingLocation").innerHTML = "waiting for update...";
-                document.getElementById("status").innerHTML ="waiting for update...";
-            }            
-        },
-
-        unload: function () {
-            // TODO: Respond to navigations away from this page.
-        },
-
-        updateLayout: function (element) {
-            /// <param name="element" domElement="true" />
-
-            // TODO: Respond to changes in layout.
         }
     });
+
+    var loc = null;
+
+    function getLoc() {
+        if (loc == null) {
+            loc = new Windows.Devices.Geolocation.Geolocator();
+            debugger;
+        }
+        if (loc != null) {
+            loc.getGeopositionAsync().then(getPositionHandler, errorHandler);
+        }
+    }
+
+    function getPositionHandler(pos) {
+        document.getElementById('startingLocation').innerHTML = pos.coordinate.point.position.latitude + ","
+            + pos.coordinate.point.position.longitude;
+        //document.getElementById('accuracy').innerHTML = pos.coordinate.accuracy;
+        document.getElementById('geolocatorStatus' && 'errormsg').innerHTML =
+            getStatusString(loc.locationStatus && loc.locationStatus);
+    }
+
+    function errorHandler(e) {
+        document.getElementById('errormsg').innerHTML = e.message;
+        // Display an appropriate error message based on the location status.
+        document.getElementById('geolocatorStatus').innerHTML =
+            getStatusString(loc.locationStatus);
+    }
+
+    function getStatusString(locStatus) {
+        switch (locStatus) {
+            case Windows.Devices.Geolocation.PositionStatus.ready:
+                // Location data is available
+                return "Location is available.";
+                break;
+            case Windows.Devices.Geolocation.PositionStatus.initializing:
+                // This status indicates that a GPS is still acquiring a fix
+                return "A GPS device is still initializing.";
+                break;
+            case Windows.Devices.Geolocation.PositionStatus.noData:
+                // No location data is currently available 
+                return "Data from location services is currently unavailable.";
+                break;
+            case Windows.Devices.Geolocation.PositionStatus.disabled:
+                // The app doesn't have permission to access location,
+                // either because location has been turned off.
+                return "Your location is currently turned off. " +
+                    "Change your settings through the Settings charm " +
+                    " to turn it back on.";
+                break;
+            case Windows.Devices.Geolocation.PositionStatus.notInitialized:
+                // This status indicates that the app has not yet requested
+                // location data by calling GetGeolocationAsync() or 
+                // registering an event handler for the positionChanged event. 
+                return "Location status is not initialized because " +
+                    "the app has not requested location data.";
+                break;
+            case Windows.Devices.Geolocation.PositionStatus.notAvailable:
+                // Location is not available on this version of Windows
+                return "You do not have the required location services " +
+                    "present on your system.";
+                break;
+            default:
+                break;
+        }
+    }
+
 })();

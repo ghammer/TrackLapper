@@ -11,10 +11,10 @@
 
     <link href="/css/default.css" rel="stylesheet" />
     <link href="page2.css" rel="stylesheet" />
+    <script src="default.js"></script>
     <script src="page2.js"></script>
 </head>
 <body>
-
     <div class="page2 fragment">
         <div id="splitTemplate" data-win-control="WinJS.Binding.Template" style="display: none">
             <div class="splitWrapper">
@@ -36,9 +36,9 @@
                 <button class="button3" id="split" onclick="split()">Split</button>
             </div>
             <div class="geo">
-                <p id="startingLocation"></p>
-                <p id="currentPosition"></p>
-                <p id="status"></p>
+                Location: <span id="startingLocation"></span><br />
+                <!--<p id="currentPosition"></p>-->
+                Location status: <span id="geolocatorStatus"></span>
             </div>
             <div class="list" id="listView" data-win-control="WinJS.UI.ListView"
                  data-win-options="{
