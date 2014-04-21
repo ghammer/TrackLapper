@@ -10,25 +10,7 @@
             var TOLsplit = 0;
             var splitTime = 0;
             var splitOutput = '';
-
-            //var start = new Date().getTime(),
-            //           time = 0,
-            //           elapsed = '0.0';
-
-            //function instance() {
-            //    time += 100;
-
-            //    elapsed = Math.floor(time / 100) / 10;
-            //    if (Math.round(elapsed) == elapsed) { elapsed += '.0'; }
-
-            //    document.getElementById("output").innerHTML = elapsed;
-
-            //    var diff = (new Date().getTime() - start) - time;
-            //    window.setTimeout(instance, (100 - diff));
-            //}
-
-            //window.setTimeout(instance, 100);
-
+            
             //start timer and gps
             startPause.onclick = function startPause() {
                 if (running == 0) {
