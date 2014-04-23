@@ -46,7 +46,11 @@
 
             boogieButton.onclick = function () {
 
-                TrackLapperClient.getTable("Lappers").insert({ userId: home.user.id, firstname: home.user.first_name, lastname: home.user.last_name })
+                TrackLapperClient.getTable("Lappers").where({ userId: home.user.id }).read().then(function (results) {
+                    if (results[0] == null || results[0] == undefined) {
+                        TrackLapperClient.getTable("Lappers").insert({ userId: home.user.id, firstname: home.user.first_name, lastname: home.user.last_name })
+                    }
+                });
 
                 WinJS.Navigation.navigate("/pages/page2/page2.html")
             };

@@ -25,12 +25,12 @@
                     console.log(running)
                     increment();
                     //change button inner html to "Pause" from "Start"
-                    startPause.innerHTML = "Pause";
+                    document.getElementById("startPause").innerHTML = "Pause";
                 }
 
                 else {
                     running = 0;
-                    startPause.innerHTML = "Resume";
+                    document.getElementById("startPause").innerHTML = "Resume";
                 }
             }
 
@@ -38,9 +38,6 @@
                     //set running and time to 0
                     running = 0;
                     time = 0;
-                    currentTime = 0
-                    TOLsplit = 0;
-                    splitTime = 0;
 
                     //changes inner html to "Start" from "Resume"
                     startPause.innerHTML = "Start";
@@ -104,7 +101,6 @@
     function getLoc() {
         if (loc == null) {
             loc = new Windows.Devices.Geolocation.Geolocator();
-            //debugger;
         }
         if (loc != null) {
             loc.getGeopositionAsync().then(getPositionHandler, errorHandler);
