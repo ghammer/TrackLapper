@@ -6,12 +6,12 @@
 .output {
     height: 180px;
     font-size: 170px;
-    font-family: DFKai-SB;
+    font-family: 'Quartz MS';
     text-align: center;
     width: 51%;
     float: left;
     position: relative;
-    margin-left: 5%;
+    /*margin-left: 5%;*/
 }
 
 .buttonSpace {
@@ -21,7 +21,7 @@
     float: left;
     position: relative;
     margin-top: 2%;
-    margin-left: 7.9%;
+    margin-left: 5.5%;
 }
 
 .button1 {
@@ -41,10 +41,10 @@
 
 .geo {
     position: relative;
-    height: 45px;
+    height: 85px;
     width: 49%;
     margin-top: 37%;
-    margin-left: 7.5%;
+    margin-left: 1%;
 }
 
 .list {
@@ -53,7 +53,7 @@
     height: 600px;
     width: 450px;
     margin-right: 10%;
-    margin-top: -38%
+    margin-top: -39.5%
 }
 
 #listView {

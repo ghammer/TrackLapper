@@ -2,11 +2,16 @@ css\default.css
 default.html
 Fonts\LiveSymbol.ttf
 images\logo.scale-100.png
+images\logo.scale-140.png
+images\logo.scale-180.png
+images\logo.scale-80.png
 images\meanCone.png
 images\nightRace.jpg
 images\smalllogo100.png
 images\splashscreen.scale-100.png
 images\storelogo.scale-100.png
+images\storelogo.scale-140.png
+images\storelogo.scale-180.png
 js\default.js
 js\MobileServices.intellisense.js
 js\MobileServices.js

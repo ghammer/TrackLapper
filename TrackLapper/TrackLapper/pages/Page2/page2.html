@@ -11,7 +11,6 @@
 
     <link href="/css/default.css" rel="stylesheet" />
     <link href="page2.css" rel="stylesheet" />
-    <script src="default.js"></script>
     <script src="page2.js"></script>
 </head>
 <body>
@@ -37,13 +36,14 @@
                 <button class="button3" id="split" onclick="split()">Split</button>
             </div>
             <div class="geo">
-                Location: <span id="startingLocation"></span><br />
-                <!--<p id="currentPosition"></p>-->
+                Starting Location: <span id="startingLocation"></span><br />
+                Current Position: <span id="currentPosition"></span><br />
+                Accuracy: <span id="accuracy"></span><br />
                 Location status: <span id="geolocatorStatus"></span>
             </div>
             <div class="list" id="listView" data-win-control="WinJS.UI.ListView"
                  data-win-options="{
-                 itemDataSource: TrackLapper.splitList.dataSource,
+                 itemDataSource: home.splitList.dataSource,
                  selectionMode: 'none',
                  layout: { type: WinJS.UI.ListLayout }
                  }">

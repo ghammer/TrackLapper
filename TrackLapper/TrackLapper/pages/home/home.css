@@ -14,11 +14,21 @@
     color: mediumseagreen;
 }
 
-.logInButton {
+.boogieButton {
     margin-top: 30%;
     margin-left: 55%;
     height: 80px;
     width: 400px;
     font-size: 45px;
     text-align: center;
+}
+
+.greeting {
+    height: 80px;
+    width: 500px;
+    margin-left: 55%;
+    margin-top: -13%;
+    color: gold;
+    font-size: 50px;
+    text-align: left;
 }

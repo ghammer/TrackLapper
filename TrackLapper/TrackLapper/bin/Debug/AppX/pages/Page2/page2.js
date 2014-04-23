@@ -4,19 +4,6 @@
     var activation = Windows.ApplicationModel.Activation;
     var app = WinJS.Application;
 
-    app.onactivated = function (args) {
-        if (args.detail.kind === activation.ActivationKind.launch) {
-            debugger;
-            args.setPromise(WinJS.UI.processAll().
-                done(function () {
-
-                    // Add an event handler to the button.
-                    document.querySelector("#startPause").addEventListener("click",
-                        getLoc);
-                }));
-        }
-    };
-
     WinJS.UI.Pages.define("/pages/Page2/page2.html", {
 
         ready: function (element, options) {
@@ -26,21 +13,24 @@
             var TOLsplit = 0;
             var splitTime = 0;
 
+            // Add an event handler to the button.
+            startPause.addEventListener("click",
+                getLoc);
+
+
             //start timer and gps
             startPause.onclick = function startPause() {
-                //debugger;
                 if (running == 0) {
-                    //startTracking();
                     running = 1;
                     console.log(running)
                     increment();
                     //change button inner html to "Pause" from "Start"
-                    document.getElementById("startPause").innerHTML = "Pause";
+                    startPause.innerHTML = "Pause";
                 }
 
                 else {
                     running = 0;
-                    document.getElementById("startPause").innerHTML = "Resume";
+                    startPause.innerHTML = "Resume";
                 }
             }
 
@@ -53,11 +43,11 @@
                     splitTime = 0;
 
                     //changes inner html to "Start" from "Resume"
-                    document.getElementById("startPause").innerHTML = "Start";
+                    startPause.innerHTML = "Start";
                     //resets output box to "00:00:00:00"
-                    document.getElementById("output").innerHTML = "00:00:00";
+                    output.innerHTML = "00:00:00";
                     //resets output box to "00:00:00:00"
-                    document.getElementById("outputSplit").innerHTML = "00:00:00";
+                    outputSplit.innerHTML = "00:00:00";
             }
 
             split.onclick = function split() {
@@ -78,7 +68,7 @@
                     secs = "0" + secs;
                 }
 
-                var split = document.getElementById("outputSplit").innerHTML = mins + ":" + secs + ":" + tenths;
+                var split = outputSplit.innerHTML = mins + ":" + secs + ":" + tenths;
                 TrackLapper.splitList.push(split)
             }
 
@@ -114,26 +104,28 @@
     function getLoc() {
         if (loc == null) {
             loc = new Windows.Devices.Geolocation.Geolocator();
-            debugger;
+            //debugger;
         }
-
         if (loc != null) {
             loc.getGeopositionAsync().then(getPositionHandler, errorHandler);
         }
     }
 
     function getPositionHandler(pos) {
-        document.getElementById('startingLocation').innerHTML = pos.coordinate.point.position.latitude + ","
-            + pos.coordinate.point.position.longitude;
-        //document.getElementById('accuracy').innerHTML = pos.coordinate.accuracy;
-        document.getElementById('geolocatorStatus' && 'errormsg').innerHTML =
-            getStatusString(loc.locationStatus && loc.locationStatus);
+        startingLocation.innerHTML = pos.coordinate.point.position.latitude + "," + pos.coordinate.point.position.longitude;
+        accuracy.innerHTML = pos.coordinate.accuracy + " meter(s)";
+        geolocatorStatus.innerHTML = getStatusString(loc.locationStatus);
+    }
+
+    function onPositionChanged(args) {
+        currentPosition.innerHTML = pos.coordinate.latitude + "," + pos.coordinate.longitude;
+
     }
 
     function errorHandler(e) {
-        document.getElementById('errormsg').innerHTML = e.message;
+        derrormsg.innerHTML = e.message;
         // Display an appropriate error message based on the location status.
-        document.getElementById('geolocatorStatus').innerHTML =
+        geolocatorStatus.innerHTML =
             getStatusString(loc.locationStatus);
     }
 
