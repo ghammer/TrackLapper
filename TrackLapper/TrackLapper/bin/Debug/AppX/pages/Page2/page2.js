@@ -25,10 +25,10 @@
             var running = 0;
             var TOLsplit = 0;
             var splitTime = 0;
-            var splitOutput = '';
 
             //start timer and gps
             startPause.onclick = function startPause() {
+                //debugger;
                 if (running == 0) {
                     //startTracking();
                     running = 1;
@@ -45,14 +45,19 @@
             }
 
             reset.onclick = function reset() {
-                running = 0;
-                time = 0
-                //changes inner html to "Start" from "Resume"
-                document.getElementById("startPause").innerHTML = "Start";
-                //resets output box to "00:00:00:00"
-                document.getElementById("output").innerHTML = "00:00:00";
-                //resets output box to "00:00:00:00"
-                document.getElementById("outputSplit").innerHTML = "00:00:00";
+                    //set running and time to 0
+                    running = 0;
+                    time = 0;
+                    currentTime = 0
+                    TOLsplit = 0;
+                    splitTime = 0;
+
+                    //changes inner html to "Start" from "Resume"
+                    document.getElementById("startPause").innerHTML = "Start";
+                    //resets output box to "00:00:00:00"
+                    document.getElementById("output").innerHTML = "00:00:00";
+                    //resets output box to "00:00:00:00"
+                    document.getElementById("outputSplit").innerHTML = "00:00:00";
             }
 
             split.onclick = function split() {
@@ -68,6 +73,7 @@
                 if (mins < 10) {
                     mins = "0" + mins;
                 }
+
                 if (secs < 10) {
                     secs = "0" + secs;
                 }
@@ -80,6 +86,7 @@
                 if (running == 1) {
                     setTimeout(function () {
                         time++;
+
                         var mins = Math.floor(time / 10 / 60);
                         var secs = Math.floor(time / 10 % 60);
                         var tenths = time % 10;
@@ -87,6 +94,7 @@
                         if (mins < 10) {
                             mins = "0" + mins;
                         }
+
                         if (secs < 10) {
                             secs = "0" + secs;
                         }
@@ -108,6 +116,7 @@
             loc = new Windows.Devices.Geolocation.Geolocator();
             debugger;
         }
+
         if (loc != null) {
             loc.getGeopositionAsync().then(getPositionHandler, errorHandler);
         }
@@ -165,5 +174,4 @@
                 break;
         }
     }
-
 })();

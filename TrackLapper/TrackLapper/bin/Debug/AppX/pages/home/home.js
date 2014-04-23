@@ -7,6 +7,8 @@
         init: function() { WinJS.Namespace.define("TrackLapper", {
             splitList: new WinJS.Binding.List(),
         })
+            
+ 
         },
         ready: function (element, options) {
             WL.init({

@@ -3,9 +3,11 @@
   <PropertyGroup>
     <Machine>HAMMER</Machine>
     <WindowsUser>Glen</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
     <PackageIdentityName>11039getHAMMEREDStudios.TrackLapper</PackageIdentityName>
+    <IntermediateOutputPath>C:\Users\Glen\Documents\GitHub\TrackLapper\TrackLapper\TrackLapper\bld\Debug\</IntermediateOutputPath>
   </PropertyGroup>
   <ItemGroup>
     <AppXManifest Include="C:\Users\Glen\Documents\GitHub\TrackLapper\TrackLapper\TrackLapper\bin\Debug\AppxManifest.xml">
@@ -26,17 +28,12 @@
     <AppxPackagedFile Include="C:\Users\Glen\Documents\GitHub\TrackLapper\TrackLapper\TrackLapper\Fonts\LiveSymbol.ttf">
       <PackagePath>Fonts\LiveSymbol.ttf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Glen\Documents\GitHub\TrackLapper\TrackLapper\TrackLapper\images\smalllogo.scale-100.png">
-      <PackagePath>images\smalllogo.scale-100.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Glen\Documents\GitHub\TrackLapper\TrackLapper\TrackLapper\images\logo.scale-100.png">
       <PackagePath>images\logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Glen\Documents\GitHub\TrackLapper\TrackLapper\TrackLapper\images\smalllogo.scale-180.png">
-      <PackagePath>images\smalllogo.scale-180.png</PackagePath>
-      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    <AppxPackagedFile Include="C:\Users\Glen\Documents\GitHub\TrackLapper\TrackLapper\TrackLapper\images\meanCone.png">
+      <PackagePath>images\meanCone.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Glen\Documents\GitHub\TrackLapper\TrackLapper\TrackLapper\images\smalllogo100.png">
       <PackagePath>images\smalllogo100.png</PackagePath>
@@ -48,6 +45,9 @@
     <AppxPackagedFile Include="C:\Users\Glen\Documents\GitHub\TrackLapper\TrackLapper\TrackLapper\images\storelogo.scale-100.png">
       <PackagePath>images\storelogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Glen\Documents\GitHub\TrackLapper\TrackLapper\TrackLapper\images\nightRace.jpg">
+      <PackagePath>images\nightRace.jpg</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Glen\Documents\GitHub\TrackLapper\TrackLapper\TrackLapper\js\default.js">
       <PackagePath>js\default.js</PackagePath>

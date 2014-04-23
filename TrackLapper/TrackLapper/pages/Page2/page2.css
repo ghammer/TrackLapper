@@ -8,7 +8,7 @@
     font-size: 170px;
     font-family: DFKai-SB;
     text-align: center;
-    width: 50%;
+    width: 51%;
     float: left;
     position: relative;
     margin-left: 5%;
@@ -21,7 +21,7 @@
     float: left;
     position: relative;
     margin-top: 2%;
-    margin-left: 7.5%;
+    margin-left: 7.9%;
 }
 
 .button1 {
@@ -41,8 +41,8 @@
 
 .geo {
     position: relative;
-    height: 30px;
-    width: 50%;
+    height: 45px;
+    width: 49%;
     margin-top: 37%;
     margin-left: 7.5%;
 }

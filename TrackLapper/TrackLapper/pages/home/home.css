@@ -2,3 +2,23 @@
     margin-left: 120px;
     margin-right: 120px;
 }
+
+.homepage {
+    background-image: url(/images/nightRace.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.homePageTitle {
+    width: calc(100% - 20px);
+    color: mediumseagreen;
+}
+
+.logInButton {
+    margin-top: 30%;
+    margin-left: 55%;
+    height: 80px;
+    width: 400px;
+    font-size: 45px;
+    text-align: center;
+}
