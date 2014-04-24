@@ -6,12 +6,12 @@
 .output {
     height: 180px;
     font-size: 170px;
-    font-family: 'Quartz MS';
+    font-family: 'Gill Sans MT';
     text-align: center;
     width: 51%;
     float: left;
     position: relative;
-    /*margin-left: 5%;*/
+    margin-left: 2.5%;
 }
 
 .buttonSpace {
