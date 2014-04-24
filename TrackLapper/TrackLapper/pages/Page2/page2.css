@@ -1,4 +1,10 @@
-﻿.page2 section[role=main] {
+﻿#page2 {
+    display: -ms-grid;
+    /*-ms-grid-columns: 1fr 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr;*/
+}
+
+.page2 section[role=main] {
     margin-left: 120px;
     margin-right: 120px;
 }
@@ -49,6 +55,7 @@
 
 .list {
     border: 3px solid #000000;
+    font-family: 'Gill Sans MT';
     float: right;
     height: 600px;
     width: 450px;

@@ -103,6 +103,7 @@
                     }
                 );
             },
+
                 function (responseFailed) {
                     document.getElementById("infoArea").innerText =
                         "Error signing in: " + responseFailed.error_description;

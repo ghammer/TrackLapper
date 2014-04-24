@@ -15,12 +15,13 @@
     .fragment header[role=banner] {
         /* Define a grid with columns for the back button and page title. */
         -ms-grid-columns: 37px 83px 1fr;
-        -ms-grid-rows: 1fr;
+        -ms-grid-rows: 1fr 1fr;
         display: -ms-grid;
     }
 
         .fragment header[role=banner] .win-navigation-backbutton {
             -ms-grid-column: 2;
+            -ms-grid-row: 2;
             margin-top: 57px;
             position: relative;
             z-index: 1;
@@ -29,6 +30,7 @@
         .fragment header[role=banner] .titlearea {
             -ms-grid-column: 3;
             margin-top: 37px;
+            
         }
 
             .fragment header[role=banner] .titlearea .pagetitle {
@@ -37,6 +39,6 @@
 
     .fragment section[role=main] {
         -ms-grid-row: 2;
-        height: 100%;
+        height: 50%;
         width: 100%;
     }

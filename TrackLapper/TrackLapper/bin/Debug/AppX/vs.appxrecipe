@@ -26,15 +26,15 @@
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Glen\Documents\GitHub\TrackLapper\TrackLapper\TrackLapper\css\default.css">
       <PackagePath>css\default.css</PackagePath>
-      <Modified>2014-04-22T21:41:12.549</Modified>
+      <Modified>2014-04-24T22:22:43.063</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Glen\Documents\GitHub\TrackLapper\TrackLapper\TrackLapper\pages\home\home.css">
       <PackagePath>pages\home\home.css</PackagePath>
-      <Modified>2014-04-24T19:49:33.900</Modified>
+      <Modified>2014-04-24T23:13:04.514</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Glen\Documents\GitHub\TrackLapper\TrackLapper\TrackLapper\pages\page2\page2.css">
       <PackagePath>pages\page2\page2.css</PackagePath>
-      <Modified>2014-04-24T17:49:49.807</Modified>
+      <Modified>2014-04-24T21:58:00.846</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Glen\Documents\GitHub\TrackLapper\TrackLapper\TrackLapper\Fonts\LiveSymbol.ttf">
       <PackagePath>Fonts\LiveSymbol.ttf</PackagePath>
@@ -240,11 +240,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Glen\Documents\GitHub\TrackLapper\TrackLapper\TrackLapper\pages\home\home.js">
       <PackagePath>pages\home\home.js</PackagePath>
-      <Modified>2014-04-24T20:19:14.208</Modified>
+      <Modified>2014-04-24T20:21:26.815</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Glen\Documents\GitHub\TrackLapper\TrackLapper\TrackLapper\pages\page2\page2.js">
       <PackagePath>pages\page2\page2.js</PackagePath>
-      <Modified>2014-04-24T20:10:02.604</Modified>
+      <Modified>2014-04-24T21:03:58.594</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Glen\Documents\GitHub\TrackLapper\TrackLapper\TrackLapper\services\mobile services\TrackLapper\service.js">
       <PackagePath>services\mobile services\TrackLapper\service.js</PackagePath>
@@ -256,7 +256,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Glen\Documents\GitHub\TrackLapper\TrackLapper\TrackLapper\pages\home\home.html">
       <PackagePath>pages\home\home.html</PackagePath>
-      <Modified>2014-04-24T20:03:15.566</Modified>
+      <Modified>2014-04-24T23:19:07.013</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Glen\Documents\GitHub\TrackLapper\TrackLapper\TrackLapper\default.html">
       <PackagePath>default.html</PackagePath>
@@ -264,7 +264,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Glen\Documents\GitHub\TrackLapper\TrackLapper\TrackLapper\pages\page2\page2.html">
       <PackagePath>pages\page2\page2.html</PackagePath>
-      <Modified>2014-04-23T21:39:24.783</Modified>
+      <Modified>2014-04-24T23:19:06.999</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Glen\Documents\GitHub\TrackLapper\TrackLapper\TrackLapper\bin\Debug\ReverseMap\resources.pri">
       <PackagePath>resources.pri</PackagePath>

@@ -1,8 +1,9 @@
 ﻿(function () {
     "use strict";
 
-    var activation = Windows.ApplicationModel.Activation;
     var app = WinJS.Application;
+    var activation = Windows.ApplicationModel.Activation;
+    var myHistory = WinJS.Navigation.history;
 
     WinJS.UI.Pages.define("/pages/Page2/page2.html", {
 
@@ -16,7 +17,6 @@
             // Event handler for the startPause button
             startPause.addEventListener("click",
                 home.getLoc);
-
 
             // Start timer and gps
             startPause.onclick = function startPause() {
@@ -86,14 +86,13 @@
                             secs = "0" + secs;
                         }
 
-                        document.getElementById("output").innerHTML = mins + ":" + secs + ":" + "0" + tenths;
+                        output.innerHTML = mins + ":" + secs + ":" + "0" + tenths;
                         currentTime = mins + secs + tenths;
                         console.log(currentTime);
                         increment();
                     }, 100);
                 }
             }
-
         }
     });
 })();
