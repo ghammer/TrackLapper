@@ -32,11 +32,6 @@
     margin-left: 50%;
 }
 
-.page2 section[role=main] {
-    margin-left: 120px;
-    margin-right: 120px;
-}
-
 .outputSpace {
     display: -ms-grid;
     -ms-grid-columns: 1fr;
@@ -112,7 +107,7 @@
 }
 
 #listView {
-    font-size: 50px;
+    font-size: 500%;
     text-align: center;
     -ms-grid-column: 2;
     -ms-grid-row: 2;

@@ -34,7 +34,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Glen\Documents\GitHub\TrackLapper\TrackLapper\TrackLapper\pages\page2\page2.css">
       <PackagePath>pages\page2\page2.css</PackagePath>
-      <Modified>2014-04-25T19:55:04.808</Modified>
+      <Modified>2014-04-25T20:07:54.548</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Glen\Documents\GitHub\TrackLapper\TrackLapper\TrackLapper\Fonts\LiveSymbol.ttf">
       <PackagePath>Fonts\LiveSymbol.ttf</PackagePath>
@@ -244,7 +244,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Glen\Documents\GitHub\TrackLapper\TrackLapper\TrackLapper\pages\page2\page2.js">
       <PackagePath>pages\page2\page2.js</PackagePath>
-      <Modified>2014-04-25T20:03:44.882</Modified>
+      <Modified>2014-04-25T20:04:09.433</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Glen\Documents\GitHub\TrackLapper\TrackLapper\TrackLapper\services\mobile services\TrackLapper\service.js">
       <PackagePath>services\mobile services\TrackLapper\service.js</PackagePath>
