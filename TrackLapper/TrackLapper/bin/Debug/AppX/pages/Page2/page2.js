@@ -85,6 +85,9 @@
                         if (secs < 10) {
                             secs = "0" + secs;
                         }
+                        if (tenths > .1 && tenths < 1 ) {
+                            tenths = tenths + "0";
+                        }
 
                         output.innerHTML = mins + ":" + secs + ":" + "0" + tenths;
                         currentTime = mins + secs + tenths;

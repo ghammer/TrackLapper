@@ -23,28 +23,30 @@
         <header aria-label="Header content" role="banner">
             <button data-win-control="WinJS.UI.BackButton"></button>
             <div class="pagetitle">TrackLapper</div>
-            <img src="/images/meanCone.png" style="-ms-grid-column: 3; margin-left: 1066px; margin-bottom: -52px;" />
+            <img class="meanCone" src="/images/meanCone.png" />
         </header>
-            <div class="output" id="output">00:00:00</div>
-            <div class="output" id="outputSplit">00:00:00</div>
-            <div class="buttonSpace">
-                <button class="button1" id="startPause" onclick="startPause()">Start</button>
-                <button class="button2" id="reset" onclick="reset()">Reset</button>
-                <button class="button3" id="split" onclick="split()">Split</button>
-            </div>
-            <div class="geo">
-                Starting Location: <span id="startingLocation"></span><br />
-                Current Position: <span id="currentPosition"></span><br />
-                Accuracy: <span id="accuracy"></span><br />
-                Location status: <span id="geolocatorStatus"></span>
-            </div>
-            <div class="list" id="listView" data-win-control="WinJS.UI.ListView"
-                 data-win-options="{
+        <div class="outputSpace">
+            <div class="output1" id="output">00:00:00</div>
+            <div class="output2" id="outputSplit">00:00:00</div>
+        </div>
+        <div class="buttonSpace">
+            <button class="button1" id="startPause" onclick="startPause()">Start</button>
+            <button class="button2" id="reset" onclick="reset()">Reset</button>
+            <button class="button3" id="split" onclick="split()">Split</button>
+        </div>
+        <div class="geo">
+            Starting Location: <span id="startingLocation"></span><br />
+            Current Position: <span id="currentPosition"></span><br />
+            Accuracy: <span id="accuracy"></span><br />
+            Location status: <span id="geolocatorStatus"></span>
+        </div>
+        <div class="list" id="listView" data-win-control="WinJS.UI.ListView"
+             data-win-options="{
                  itemDataSource: home.splitList.dataSource,
                  selectionMode: 'none',
                  layout: { type: WinJS.UI.ListLayout }
                  }">
-            </div>
+        </div>
     </div>
 </body>
 </html>

@@ -4,11 +4,6 @@
     -ms-grid-rows: 9fr 100fr 9fr;
 }
 
-.homepage section[role=main] {
-    margin-left: 120px;
-    margin-right: 120px;
-}
-
 #background {
     background-image: url(/images/nightRace.jpg);
     background-position: center;
@@ -20,18 +15,18 @@
 }
 
 .homePageTitle {
-    margin-left: 5%;
+    margin-left: 2%;
     color: mediumseagreen;
     -ms-grid-column: 1;
     -ms-grid-row: 2;
-    font-size: 55px;
-    height: 70px;
+    font-size: 385%;
+    height: 11%;
 }
 
 .boogieButton {
     height: 80px;
     width: 400px;
-    font-size: 45px;
+    font-size: 310%;
     text-align: center;
     -ms-grid-column: 2;
     -ms-grid-row: 2;
