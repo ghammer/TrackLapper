@@ -6,7 +6,7 @@
     var myHistory = WinJS.Navigation.history;
 
     WinJS.UI.Pages.define("/pages/Page2/page2.html", {
-
+    
         ready: function (element, options) {
             var time = 0;
             var currentTime = 0;
@@ -14,15 +14,19 @@
             var TOLsplit = 0;
             var splitTime = 0;
 
-            // Event handler for the startPause button
-            startPause.addEventListener("click",
-                home.getLoc);
+            if (home.user != undefined) {
+                // Event handler for the startPause button
+                startPause.addEventListener("click",
+                    home.getLoc);
+            }
 
+            else {
+                Windows.UI.Popups.MessageDialog("You are not currently connected to the internet.")
+            }
             // Start timer and gps
             startPause.onclick = function startPause() {
                 if (running == 0) {
                     running = 1;
-                    console.log(running)
                     increment();
                     // Change button inner html to "Pause" from "Start"
                     document.getElementById("startPause").innerHTML = "Pause";
@@ -35,16 +39,15 @@
             }
 
             reset.onclick = function reset() {
-                    // Set running and time to 0
-                    running = 0;
-                    time = 0;
-
-                    // Changes inner html to "Start" from "Resume"
-                    startPause.innerHTML = "Start";
-                    // Resets output box to "00:00:00:00"
-                    output.innerHTML = "00:00:00";
-                    // Resets output box to "00:00:00:00"
-                    outputSplit.innerHTML = "00:00:00";
+                // Set running and time to 0
+                running = 0;
+                time = 0;
+                // Changes inner html to "Start" from "Resume"
+                startPause.innerHTML = "Start";
+                // Resets output box to "00:00:00:00"
+                output.innerHTML = "00:00:00";
+                // Resets output box to "00:00:00:00"
+                outputSplit.innerHTML = "00:00:00";
             }
 
             split.onclick = function split() {
@@ -71,7 +74,7 @@
 
             function increment() {
                 if (running == 1) {
-                    setTimeout(function () {
+                    setTimeout (function() {
                         time++;
 
                         var mins = Math.floor(time / 10 / 60);
@@ -86,9 +89,8 @@
                             secs = "0" + secs;
                         }
 
-                        output.innerHTML = mins + ":" + secs + ":" + "0" + tenths;
+                        output.innerHTML = mins + ":" + secs + ":" + tenths;
                         currentTime = mins + secs + tenths;
-                        console.log(currentTime);
                         increment();
                     }, 100);
                 }

@@ -8,7 +8,7 @@
     <PackageArchitecture>neutral</PackageArchitecture>
     <PackageIdentityName>11039getHAMMEREDStudios.TrackLapper</PackageIdentityName>
     <IntermediateOutputPath>C:\Users\Glen\Documents\GitHub\TrackLapper\TrackLapper\TrackLapper\bld\Debug\</IntermediateOutputPath>
-    <RegisteredManifestChecksum>B88A06F882422B1B708853B6ECA745BCF8A48E58547043789D6350933EF5B4EA</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>E19D46ABB5289B4492DF6CB1150F53142E4B4DDB3389C34EF2ADB8196AFC9146</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>11039getHAMMEREDStudios.TrackLapper_1.1.0.0_neutral__t2ftjfh0vpnq8</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>11039getHAMMEREDStudios.TrackLapper_t2ftjfh0vpnq8!App</RegisteredUserModeAppID>
     <RegisteredPackageID>11039getHAMMEREDStudios.TrackLapper</RegisteredPackageID>
@@ -20,7 +20,7 @@
     <AppXManifest Include="C:\Users\Glen\Documents\GitHub\TrackLapper\TrackLapper\TrackLapper\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-04-25T04:22:05.176</Modified>
+      <Modified>2014-04-29T16:26:31.985</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -240,11 +240,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Glen\Documents\GitHub\TrackLapper\TrackLapper\TrackLapper\pages\home\home.js">
       <PackagePath>pages\home\home.js</PackagePath>
-      <Modified>2014-04-24T20:21:26.815</Modified>
+      <Modified>2014-04-29T20:07:01.737</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Glen\Documents\GitHub\TrackLapper\TrackLapper\TrackLapper\pages\page2\page2.js">
       <PackagePath>pages\page2\page2.js</PackagePath>
-      <Modified>2014-04-25T20:04:09.433</Modified>
+      <Modified>2014-04-29T20:03:36.633</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Glen\Documents\GitHub\TrackLapper\TrackLapper\TrackLapper\services\mobile services\TrackLapper\service.js">
       <PackagePath>services\mobile services\TrackLapper\service.js</PackagePath>
@@ -268,7 +268,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Glen\Documents\GitHub\TrackLapper\TrackLapper\TrackLapper\bin\Debug\ReverseMap\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2014-04-25T04:22:04.504</Modified>
+      <Modified>2014-04-29T16:26:31.094</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

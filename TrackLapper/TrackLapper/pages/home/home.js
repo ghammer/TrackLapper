@@ -17,15 +17,19 @@
             }
         },
 
-        getPositionHandler: function(pos) {
-            startingLocation.innerHTML = pos.coordinate.point.position.latitude + "," + pos.coordinate.point.position.longitude;
-            accuracy.innerHTML = pos.coordinate.accuracy + " meter(s)";
-            geolocatorStatus.innerHTML = home.getStatusString(home.loc.locationStatus);
+            getPositionHandler: function (pos) {
+                try{
+                    startingLocation.innerHTML = pos.coordinate.point.position.latitude + "," + pos.coordinate.point.position.longitude;
+                    accuracy.innerHTML = pos.coordinate.accuracy + " meter(s)";
+                    geolocatorStatus.innerHTML = home.getStatusString(home.loc.locationStatus);
+                }
+                catch(err) {
+                    WinJS.Navigation.navigate("/pages/page2/page2.html")
+                }
     },
 
             onPositionChanged: function(args) {
                 currentPosition.innerHTML = pos.coordinate.latitude + "," + pos.coordinate.longitude;
-
     },
 
             errorHandler: function(e) {
@@ -72,7 +76,7 @@
         }
     },
 
-            user: {},
+            user: undefined,
         })
  
         },
@@ -83,39 +87,42 @@
                 scope: "wl.signin",
                 response_type: "token"
             });
-            WL.login({
-                scope: ["wl.signin", "wl.basic"]
-            }).then(function (session) {
-                WL.api({
-                    path: "me",
-                    methond: "GET"
-                }).then(function (response) {
-                    home.user = response;
-                    greeting.innerHTML = "Hello, " + home.user.first_name + "!";
-                    document.getElementById("infoArea").innerText =
-                        "Hello, " + response.first_name + " " +
-                        response.last_name + "!";
+
+                WL.login({
+                    scope: ["wl.signin", "wl.basic"]
+                }).then(function (session) {
+                    WL.api({
+                        path: "me",
+                        methond: "GET"
+                    }).then(function (response) {
+                        home.user = response;
+                        greeting.innerHTML = "Hello, " + home.user.first_name + "!";
+                        document.getElementById("infoArea").innerText =
+                            "Hello, " + response.first_name + " " +
+                            response.last_name + "!";
+                    },
+
+                        function (responseFailed) {
+                            document.getElementById("infoArea").innerText =
+                                "Error calling API: " + responseFailed.error.message;
+                        }
+                    );
+
                 },
 
                     function (responseFailed) {
                         document.getElementById("infoArea").innerText =
-                            "Error calling API: " + responseFailed.error.message;
+                            "Error signing in: " + responseFailed.error_description;
                     }
                 );
-            },
-
-                function (responseFailed) {
-                    document.getElementById("infoArea").innerText =
-                        "Error signing in: " + responseFailed.error_description;
-                }
-            );
 
             // Event handler for the startPause button to getLoc
             boogieButton.addEventListener("click",
                 home.getLoc);
 
             boogieButton.onclick = function () {
-
+                if (home.user != undefined || home.user != null) {
+                 
                 TrackLapperClient.getTable("Lappers").where({ userId: home.user.id }).read().then(function (results) {
                     if (results[0] == null || results[0] == undefined) {
                         TrackLapperClient.getTable("Lappers").insert({ userId: home.user.id, firstname: home.user.first_name, lastname: home.user.last_name })
@@ -123,6 +130,11 @@
                 });
 
                 WinJS.Navigation.navigate("/pages/page2/page2.html")
+                }
+
+                else {
+                    Windows.UI.Popups.MessageDialog("You are currently not connected to the internet.").showAsync();
+                }
             };
         }
     });
