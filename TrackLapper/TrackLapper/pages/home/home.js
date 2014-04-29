@@ -28,9 +28,9 @@
                 }
     },
 
-            onPositionChanged: function(args) {
-                currentPosition.innerHTML = pos.coordinate.latitude + "," + pos.coordinate.longitude;
-    },
+    //        onPositionChanged: function(args) {
+    //            currentPosition.innerHTML = pos.coordinate.latitude + "," + pos.coordinate.longitude;
+    //},
 
             errorHandler: function(e) {
                 derrormsg.innerHTML = e.message;

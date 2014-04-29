@@ -89,7 +89,7 @@
                             secs = "0" + secs;
                         }
 
-                        output.innerHTML = mins + ":" + secs + ":" + tenths;
+                        output.innerHTML = mins + ":" + secs + ":" + "0" + tenths;
                         currentTime = mins + secs + tenths;
                         increment();
                     }, 100);

@@ -51,4 +51,6 @@ pages\home\home.js
 pages\page2\page2.css
 pages\page2\page2.html
 pages\page2\page2.js
+pages\privacy\privacy.css
+pages\privacy\privacy.html
 services\mobile services\TrackLapper\service.js

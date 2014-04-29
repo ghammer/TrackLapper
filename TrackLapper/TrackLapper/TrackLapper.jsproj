@@ -111,6 +111,8 @@
     <Content Include="pages\page2\page2.css" />
     <Content Include="pages\page2\page2.html" />
     <Content Include="pages\page2\page2.js" />
+    <Content Include="pages\privacy\privacy.css" />
+    <Content Include="pages\privacy\privacy.html" />
     <Content Include="services\mobile services\TrackLapper\service.js">
       <ConnectedServiceReference>TrackLapper</ConnectedServiceReference>
     </Content>
